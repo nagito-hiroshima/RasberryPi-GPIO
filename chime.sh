@@ -1,5 +1,4 @@
 #!/bin/bash
-chmod +x ./chime.sh
 gpio_number=26
 echo "${gpio_number}" > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio${gpio_number}/direction
