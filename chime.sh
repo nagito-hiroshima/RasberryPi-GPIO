@@ -1,12 +1,14 @@
 #!/bin/bash
 gpio_number=26
-echo "${gpio_number}" > /sys/class/gpio/export
-echo "out" > /sys/class/gpio/gpio${gpio_number}/direction
+sudo echo "${gpio_number}" > /sys/class/gpio/export
+sudo echo "out" > /sys/class/gpio/gpio${gpio_number}/direction
 
 
-echo "1" > /sys/class/gpio/gpio${gpio_number}/value | at 15:45
+sudo echo "1" > /sys/class/gpio/gpio${gpio_number}/value | at 15:53
 
-echo "0" > /sys/class/gpio/gpio${gpio_number}/value | at 15:50
+sudo echo "0" > /sys/class/gpio/gpio${gpio_number}/value | at 15:55
+sudo echo 26 > /sys/class/gpio/unexport | at 15:56
+
 
 #echo "mpg321 /home/pi/chime/chime.mp3"| at 9:30
 #echo "mpg321 /home/pi/chime/chime.mp3" | at 9:45
