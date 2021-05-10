@@ -1,27 +1,18 @@
 #!/bin/bash
-gpio_number=26
-sudo echo "${gpio_number}" > /sys/class/gpio/export
-sudo echo "out" > /sys/class/gpio/gpio${gpio_number}/direction
+# root権限昇格
+sudo su -l
 
+# GPIO3を制御する
+echo "26" > /sys/class/gpio/export
 
-sudo echo "1" > /sys/class/gpio/gpio${gpio_number}/value | at 15:53
+# GPIO3を書き込み可能にする
+echo "out" > /sys/class/gpio/gpio26/direction
 
-sudo echo "0" > /sys/class/gpio/gpio${gpio_number}/value | at 15:55
-sudo echo 26 > /sys/class/gpio/unexport | at 15:56
+# GPIO3をOFFにする(LEDが消える)
+echo 0 > /sys/class/gpio/gpio26/value
 
+# GPIO3をONにする(LEDが点灯する)
+echo 1 > /sys/class/gpio/gpio26/value
 
-#echo "mpg321 /home/pi/chime/chime.mp3"| at 9:30
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 9:45
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 10:35
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 10:45
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 11:35
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 11:45
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 12:35
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 13:15
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 14:05
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 14:15
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 15:05
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 15:15
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 16:05
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 16:15
-#echo "mpg321 /home/pi/chime/chime.mp3" | at 17:30
+# 自動 
+#(echo 0 > /sys/class/gpio/gpio26/value;sleep 10ms;echo 1 > /sys/class/gpio/gpio26/value) | at 9:20
