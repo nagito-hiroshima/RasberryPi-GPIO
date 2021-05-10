@@ -6,7 +6,7 @@ echo "out" > /sys/class/gpio/gpio${gpio_number}/direction
 
 echo "1" > /sys/class/gpio/gpio${gpio_number}/value at 15:15
 
-echo "0" > /sys/class/gpio/gpio${gpio_number}/value at 15:15
+echo "0" > /sys/class/gpio/gpio${gpio_number}/value at 15:16
 
 #echo "mpg321 /home/pi/chime/chime.mp3"| at 9:30
 #echo "mpg321 /home/pi/chime/chime.mp3" | at 9:45
