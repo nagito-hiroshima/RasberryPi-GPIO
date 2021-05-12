@@ -3,7 +3,7 @@
 #sudo su -l
 
 # GPIO3を制御する
-echo "26" > /sys/class/gpio/export
+sudo echo "26" > /sys/class/gpio/export
 
 # GPIO3を書き込み可能にする
 #echo "out" > /sys/class/gpio/gpio26/direction
