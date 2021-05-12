@@ -1,7 +1,6 @@
 #!/bin/bash
 # root権限昇格
 #sudo su -l
-
 # GPIO3を制御する
 sudo echo "26" > /sys/class/gpio/export
 
