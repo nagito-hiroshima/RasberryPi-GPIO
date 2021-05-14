@@ -15,3 +15,7 @@
 XDG_RUNTIME_DIR=/run/user/1000
 0 0 * * 1, 2, 3, 4, 5 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nagito-hiroshima/hiroshima-campus-chime/master/chime.sh)"
 ```
+2. 動作確認用
+```
+curl -fsSL https://raw.githubusercontent.com/nagito-hiroshima/hiroshima-campus-chime/master/chime.sh | sh
+```
