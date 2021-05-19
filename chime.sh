@@ -1,6 +1,7 @@
 #!/bin/bash
-# GPIO3を制御する
-
+# 初期設定
+# sudo echo 14 > /sys/class/gpio/export;
 
 # 自動 
-(echo 14 > /sys/class/gpio/export;echo out > /sys/class/gpio/gpio14/direction;;sleep 5s;echo 14 > /sys/class/gpio/unexport;) 
+echo out > /sys/class/gpio/gpio14/direction | at 14:05
+echo in > /sys/class/gpio/gpio14/direction | at 14:06
