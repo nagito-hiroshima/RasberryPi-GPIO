@@ -19,3 +19,5 @@ echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 16:05
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 16:15
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 17:30
+
+echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 14:41
