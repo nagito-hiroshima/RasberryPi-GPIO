@@ -3,4 +3,4 @@
 
 
 # 自動 
-(echo 14 > /sys/class/gpio/export;echo out > /sys/class/gpio/gpio14/direction;;sleep 5s;echo 14 > /sys/class/gpio/unexport;) 
+(echo 14 > /sys/class/gpio/export;echo out > /sys/class/gpio/gpio14/direction;sleep 5s;echo 14 > /sys/class/gpio/unexport;) 
