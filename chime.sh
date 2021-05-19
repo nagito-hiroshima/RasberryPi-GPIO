@@ -1,8 +1,9 @@
 #!/bin/bash
 # 初期設定
-# sudo echo 14 > /sys/class/gpio/export;
+
 
 # 自動 
+sudo echo 14 > /sys/class/gpio/export;
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 14:36
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 9:30
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 9:45
@@ -19,3 +20,4 @@ echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 16:05
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 16:15
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 17:30
+echo "echo 14 > /sys/class/gpio/export" | at 17:31
