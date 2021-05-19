@@ -3,7 +3,7 @@
 
 
 # 自動 
-sudo echo 14 > /sys/class/gpio/export;
+sudo echo 14 > /sys/class/gpio/export
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 14:36
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 9:30
 echo "echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction" | at 9:45
