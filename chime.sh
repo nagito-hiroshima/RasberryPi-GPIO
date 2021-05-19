@@ -3,5 +3,5 @@
 # sudo echo 14 > /sys/class/gpio/export;
 
 # 自動 
-echo "out > /sys/class/gpio/gpio14/direction" | at "14:10"
-echo "in > /sys/class/gpio/gpio14/direction" | at "14:11"
+echo "out > /sys/class/gpio/gpio14/direction" | at 9:30
+echo "in > /sys/class/gpio/gpio14/direction" | at 9:45
