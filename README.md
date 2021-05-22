@@ -27,9 +27,16 @@ echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/g
 ```
 ## 解説
 ラズベリーパイのGPIOを扱うにはC#/Python/シェルスクリプトなど沢山ありますが  
-今回は　****「シェルスクリプト」**** で作成していきます。
+今回は　****「シェルスクリプト」**** で作成していきます。  
+以下のコマンドはラズベリーパイ標準のコマンドプロントに入力実行することが可能で、そこからシェルで作成しcronなどで定期的に実行するなど応用ができます。   
+
 (n)と例があるところは下のように使いたい番号に変換してください。  
-``` echo (n)```→```echo 21```
+``` echo (n)```→```echo 21``` 
+  
+  
+ピン配置  
+![image](https://user-images.githubusercontent.com/68215637/119237767-8616a500-bb79-11eb-9052-dbd4c725bbe7.png)
+
 
 ラズベリーパイのGPIOを変化させるには
 あるディレクトリ内にあるファイルを書き換えることで自動でGPIOの出力が変化します。
@@ -71,7 +78,14 @@ sudo echo (n) > /sys/class/gpio/unexport
 なぜ、出力モードを切り替えてON・OFFしたのかですが
 普通であればGPIOピンを出力モードにして、GNDに接続すればよいのですが
 何故かうまくリレーが動かなく試行錯誤した結果シンク電流で妥協をしました。
+![image](https://user-images.githubusercontent.com/68215637/119237907-60d66680-bb7a-11eb-9b28-4f645d5566f7.png)
+
 
 なので今回の接続回路はこのようになっていて、シンク電流でONを切り替えているため
+![image](https://user-images.githubusercontent.com/68215637/119237863-1359f980-bb7a-11eb-9e15-d071c19f1d84.png)
+
 初期設定でdirectionをOUTに設定するとcronなどで読み込みをしたとき毎回電流が流れてしまうため  
+(OUTにするとラズベリー側はGNDになって電流が流れ込み通電状態になるため）  
 directionの設定を時間していしてOUT・INを切り替えて疑似的にON・OFF再現しています。
+## 画像引用
+https://tool-lab.com/raspberrypi-startup-22/
