@@ -77,7 +77,7 @@ sudo echo (n) > /sys/class/gpio/unexport
 
 なぜ、出力モードを切り替えてON・OFFしたのかですが
 普通であればGPIOピンを出力モードにして、GNDに接続すればよいのですが
-何故かうまくリレーが動かなく試行錯誤した結果シンク電流で妥協をしました。
+RaspberryPiの出力は3.3vかつ最大出力電流は16mAしか無いためリレーを駆動できません。そこで、５Vの出力を活用してスイッチをON/OFFしてGNDを接続するシンク電流で作成しました。
 ![image](https://user-images.githubusercontent.com/68215637/119237907-60d66680-bb7a-11eb-9b28-4f645d5566f7.png)
 
 
