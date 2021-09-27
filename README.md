@@ -25,6 +25,11 @@ curl -fsSL https://raw.githubusercontent.com/nagito-hiroshima/RaspberryPi-GPIO/m
 ```
 echo out > /sys/class/gpio/gpio14/direction;sleep 2s;echo in > /sys/class/gpio/gpio14/direction
 ```
+Atジョブ全削除
+```
+at -l | while read a b;do atrm $a;done
+```
+
 ## 解説
 ラズベリーパイのGPIOを扱うにはC#/Python/シェルスクリプトなど沢山ありますが  
 今回は　****「シェルスクリプト」**** で作成していきます。  
