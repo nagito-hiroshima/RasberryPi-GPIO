@@ -29,6 +29,9 @@ Atジョブ全削除
 ```
 at -l | while read a b;do atrm $a;done
 ```
+## 広島キャンパス接続図
+GPIO14とGNDを接続する
+
 
 ## 解説
 ラズベリーパイのGPIOを扱うにはC#/Python/シェルスクリプトなど沢山ありますが  
